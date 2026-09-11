@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { menu } from '../data/menu'
+import DrinksArt from './DrinksArt'
 
 export default function Menu() {
   return (
@@ -30,12 +31,16 @@ export default function Menu() {
               </div>
 
               <div className="mt-6 grid gap-8 md:grid-cols-[280px_1fr] md:items-start lg:grid-cols-[320px_1fr]">
-                <div
-                  className="aspect-[4/3] w-full overflow-hidden rounded-xl border-2 border-char bg-crust-dim bg-cover bg-center shadow-[5px_5px_0_var(--color-char)] md:aspect-auto md:h-full"
-                  style={{ backgroundImage: `url(${category.image})` }}
-                  role="img"
-                  aria-label={category.title}
-                />
+                {category.id === 'bebidas' ? (
+                  <DrinksArt className="aspect-[4/3] w-full overflow-hidden rounded-xl border-2 border-char shadow-[5px_5px_0_var(--color-char)] md:aspect-auto md:h-full" />
+                ) : (
+                  <div
+                    className="aspect-[4/3] w-full overflow-hidden rounded-xl border-2 border-char bg-crust-dim bg-cover bg-center shadow-[5px_5px_0_var(--color-char)] md:aspect-auto md:h-full"
+                    style={{ backgroundImage: `url(${category.image})` }}
+                    role="img"
+                    aria-label={category.title}
+                  />
+                )}
 
                 <div className="grid gap-5 sm:grid-cols-2">
                 {category.items.map((item) => (

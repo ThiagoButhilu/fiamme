@@ -35,7 +35,7 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[1.05fr_0.95fr] md:items-center md:px-8 md:py-20">
-        <div>
+        <div className="text-center md:text-left">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.5 }}
-            className="mt-6 max-w-md font-body text-lg text-char-soft"
+            className="mx-auto mt-6 max-w-md font-body text-lg text-char-soft md:mx-0"
           >
             Massa fermentada por 48 horas, molho de tomate italiano e recheio
             generoso. Feita do jeito que Presidente Prudente pediu — sem pressa
@@ -71,7 +71,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0, duration: 0.5 }}
-            className="mt-8 flex flex-wrap gap-4"
+            className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start"
           >
             <IfoodButton />
             <a
@@ -86,7 +86,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
-            className="mt-8 flex items-center gap-4 text-sm font-semibold text-char-soft"
+            className="mt-8 flex items-center justify-center gap-4 text-sm font-semibold text-char-soft md:justify-start"
           >
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-flame" />
             Aberto agora até 22h30 · Quarta a Segunda
