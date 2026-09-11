@@ -69,15 +69,6 @@ body {
   background-color: #fff;
 }
 
-/* Faint oversized checkerboard used as ambient texture behind hero content */
-.checker-wash {
-  background-image:
-    linear-gradient(45deg, var(--color-flame) 25%, transparent 25%, transparent 75%, var(--color-flame) 75%),
-    linear-gradient(45deg, var(--color-flame) 25%, transparent 25%, transparent 75%, var(--color-flame) 75%);
-  background-size: 64px 64px;
-  background-position: 0 0, 32px 32px;
-}
-
 /* Torn / scalloped edge for ticket-style menu cards.
    Masking the whole card clips everything below the first mask tile,
    so the scallop is drawn on a thin ::before strip instead. */

@@ -1,12 +1,13 @@
 import { motion } from 'motion/react'
+import { asset } from '../lib/asset'
 
 const posts = [
-  { image: '/photos/combo-familia.jpg', caption: 'Combo Família saindo do forno', position: 'center' },
-  { image: '/photos/combo-inauguracao.jpg', caption: 'Combo Inauguração por R$ 20', position: 'center' },
-  { image: '/photos/combo-fit.jpg', caption: 'Combo Fit pra quem cuida da rotina', position: 'center' },
-  { image: '/photos/curta-cada-fatia.jpg', caption: 'Curta cada fatia', position: 'top' },
-  { image: '/photos/doce-oval.jpg', caption: 'Novidade: pizza doce em formato oval', position: 'center' },
-  { image: '/photos/salgada-oval.jpg', caption: 'Pizza salgada, formato oval', position: 'center' },
+  { image: asset('/photos/combo-familia.jpg'), caption: 'Combo Família saindo do forno', position: 'center' },
+  { image: asset('/photos/combo-inauguracao.jpg'), caption: 'Combo Inauguração por R$ 20', position: 'center' },
+  { image: asset('/photos/combo-fit.jpg'), caption: 'Combo Fit pra quem cuida da rotina', position: 'center' },
+  { image: asset('/photos/curta-cada-fatia.jpg'), caption: 'Curta cada fatia', position: 'top' },
+  { image: asset('/photos/doce-oval.jpg'), caption: 'Novidade: pizza doce em formato oval', position: 'center' },
+  { image: asset('/photos/salgada-oval.jpg'), caption: 'Pizza salgada, formato oval', position: 'center' },
 ]
 
 export default function Instagram() {

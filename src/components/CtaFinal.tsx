@@ -5,13 +5,6 @@ export default function CtaFinal() {
     <section id="contato" className="relative bg-char">
       <div className="checker-strip-red h-4 w-full" />
 
-      <div
-        className="absolute inset-0 bg-cover opacity-25"
-        style={{ backgroundImage: 'url(/photos/curta-cada-fatia.jpg)', backgroundPosition: 'top' }}
-        aria-hidden="true"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-char via-char/85 to-char/60" aria-hidden="true" />
-
       <div className="relative mx-auto max-w-4xl px-5 py-20 text-center md:px-8 md:py-24">
         <h2 className="font-display text-4xl text-crust sm:text-5xl">
           Escolha sua fatia da noite.

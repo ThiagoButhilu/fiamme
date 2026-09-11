@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { asset } from '../lib/asset'
 
 export default function Story() {
   return (
@@ -13,7 +14,7 @@ export default function Story() {
         >
           <div
             className="aspect-square w-full rounded-xl border-2 border-char bg-crust bg-cover bg-center shadow-[8px_10px_0_var(--color-char)]"
-            style={{ backgroundImage: 'url(/photos/salgada-oval.jpg)' }}
+            style={{ backgroundImage: `url(${asset('/photos/salgada-oval.jpg')})` }}
             role="img"
             aria-label="Pizza Fiamme recém-saída do forno"
           />

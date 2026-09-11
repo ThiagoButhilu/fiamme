@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 export type MenuItem = {
   name: string
   description: string
@@ -18,7 +20,7 @@ export const menu: MenuCategory[] = [
   {
     id: 'combos',
     title: 'Combos',
-    image: '/photos/combo-familia.jpg',
+    image: asset('/photos/combo-familia.jpg'),
     items: [
       {
         name: 'Combo Fiamme Clássico',
@@ -46,7 +48,7 @@ export const menu: MenuCategory[] = [
     id: 'individuais',
     title: 'Pizzas Individuais — 20 cm',
     note: 'Uma pessoa, um sabor, sem dividir com ninguém.',
-    image: '/photos/combo-inauguracao.jpg',
+    image: asset('/photos/combo-inauguracao.jpg'),
     items: [
       {
         name: 'Calabresa na Brasa',
@@ -69,7 +71,7 @@ export const menu: MenuCategory[] = [
     id: 'broto',
     title: 'Pizzas Broto — 25 cm',
     note: 'Tradicionais, especiais, fit e gourmet.',
-    image: '/photos/combo-fit.jpg',
+    image: asset('/photos/combo-fit.jpg'),
     items: [
       {
         name: 'Portuguesa da Casa',
@@ -92,7 +94,7 @@ export const menu: MenuCategory[] = [
     id: 'grandes',
     title: 'Pizzas Grandes — 35 cm',
     note: 'Escolha 1 ou 2 sabores. No meio a meio, vale o sabor de maior valor.',
-    image: '/photos/doce-oval.jpg',
+    image: asset('/photos/doce-oval.jpg'),
     items: [
       {
         name: 'Pepperoni Fiamme',
@@ -114,7 +116,7 @@ export const menu: MenuCategory[] = [
   {
     id: 'bebidas',
     title: 'Bebidas',
-    image: '/photos/bebidas.jpg',
+    image: asset('/photos/bebidas.jpg'),
     items: [
       {
         name: 'Refrigerante 2L',

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import Seal from './Seal'
 import IfoodButton from './IfoodButton'
+import { asset } from '../lib/asset'
 
 function Steam({ delay, left }: { delay: number; left: string }) {
   return (
@@ -16,22 +17,20 @@ function Steam({ delay, left }: { delay: number; left: string }) {
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-crust">
+    <section id="top" className="relative overflow-hidden bg-gradient-to-br from-crust-dim via-crust to-crust">
       <motion.div
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 0.7, ease: 'easeOut' }}
-        style={{ transformOrigin: 'left' }}
+        initial={{ x: '-100%' }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         className="checker-strip-hero h-6 w-full sm:h-8"
       />
 
-      <div className="checker-wash pointer-events-none absolute inset-0 opacity-[0.05]" aria-hidden="true" />
       <div
-        className="pointer-events-none absolute -right-40 top-10 h-[420px] w-[420px] rounded-full bg-flame/15 blur-3xl"
+        className="pointer-events-none absolute -right-32 top-0 h-[520px] w-[520px] rounded-full bg-flame/20 blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-cheese/20 blur-3xl"
+        className="pointer-events-none absolute -left-32 bottom-0 h-96 w-96 rounded-full bg-cheese/25 blur-3xl"
         aria-hidden="true"
       />
 
@@ -105,7 +104,7 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
             className="aspect-[4/5] w-full overflow-hidden rounded-2xl border-4 border-char bg-crust-dim shadow-[10px_12px_0_var(--color-char)] sm:aspect-square md:aspect-[4/5]"
             style={{
-              backgroundImage: 'url(/photos/curta-cada-fatia.jpg)',
+              backgroundImage: `url(${asset('/photos/curta-cada-fatia.jpg')})`,
               backgroundSize: '230%',
               backgroundPosition: '78% 32%',
             }}
@@ -139,10 +138,9 @@ export default function Hero() {
       </div>
 
       <motion.div
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 0.7, delay: 0.15, ease: 'easeOut' }}
-        style={{ transformOrigin: 'right' }}
+        initial={{ x: '100%' }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
         className="checker-strip-hero mt-6 h-6 w-full sm:h-8 md:mt-0"
       />
     </section>
